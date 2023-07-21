@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" id="favicon" href="../src/assets/img/favicon.ico" />
+  <meta name="version" content="%REACT_APP_VERSION%" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="%REACT_APP_OG_DESCRIPTION%" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+  <!-- <link rel="stylesheet" href="../src/assets/css/font-awesome.min.css" /> -->
+  <link rel="stylesheet" type="text/css" charset="UTF-8"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <title>POIISSE HOTEL</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- og -->
+  <meta property="og:type" content="%REACT_APP_OG_TYPE%" />
+  <meta property="og:site_name" content="%REACT_APP_BROWSER_TITLE%" />
+  <meta property="og:title" content="%REACT_APP_BROWSER_TITLE%" itemprop="name" />
+  <meta property="og:description" content="%REACT_APP_OG_DESCRIPTION%" itemprop="description" />
+  <meta property="og:url" content="%PUBLIC_URL%" itemprop="url" />
+  <meta property="og:image" content="%PUBLIC_URL%/images/logo.png" itemprop="image" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WQGHCRF');</script>
+  <!-- End Google Tag Manager -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!--Google Translator-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!--End Google Translator-->
+  <script type="text/javascript">
+    $('.translation-links a').click(function () {
+      var lang = $(this).data('lang');
+      var $frame = $('.goog-te-menu-frame:first');
+      if (!$frame.size()) {
+        alert("Error: Could not find Google translate frame.");
+        return false;
+      }
+      $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+      return false;
+    });
+  </script>
+</head>
+<style>
+  .frm_connectivity .nav-pills .nav-link .div_img {
+      /*background: #edd9d9;
+    width: 90px;
+      height: 90px;*/
+      width: 60px;
+      height: 60px;
+      margin: auto;
+      padding: 10px;
+      border-radius: 50%;
+      display: grid;
+      align-content: center;
+  }
+  .frm_connectivity  .nav-pills .nav-link.active .div_img{
+       background: #fff;
+  }
+  .frm_connectivity .nav-pills .nav-link .div_img img {
+      /*width: 75%;*/
+    width: 95%;
+      display: block;
+      margin: auto;
+  }
+  .frm_connectivity .nav-tabs .nav-item {
+      margin: 0;
+      /*flex-basis: 10%;*/
+    flex-basis: 8.33%;
+      text-align: center;
+      line-height: normal;
+  }
+  .frm_connectivity .nav-pills .nav-link {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom: 0;
+    padding: 10px 0;
+  }
+  .frm_connectivity .nav-pills .nav-link.active, .frm_connectivity .nav-pills .show > .nav-link {
+      background-color: #b50000;
+      border-top: 2px solid #b50000;
+      border-left: 2px solid #b50000;
+      border-right: 2px solid #b50000;
+      border-bottom: 0;
+  }
+  .frm_connectivity  .nav-pills .nav-link.active span{
+       color: #fff;
+  }
+  .frm_connectivity {
+      background: #f5eeee;
+      padding: 70px 40px;
+  }
+  .frm_connectivity .nav-tabs {
+      border-bottom: 3px solid #b50000;
+  }
+  .frm_connectivity .nav-pills .nav-link .place_name {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #000;
+      font-weight: bold;
+     /* font-family: "Old Standard TT", serif;*/
+  }
+  .frm_connectivity .nav-pills .nav-link .distance_name{
+      margin-top: 5px;
+  font-size: 11px;
+  color: #000;
+  display: block;
+  }
+  @media only screen and (max-width: 600px) and (min-width: 400px) {
+     .frm_connectivity .nav-pills .nav-link.active, .frm_connectivity .nav-pills .show > .nav-link {
+      border-radius: 17px !important;
+  }
+  .frm_connectivity .nav-tabs .nav-item {
+      flex-basis: 30% !important;
+  }
+  .frm_connectivity .nav-pills .nav-link .div_img {
+    background: #edd9d9;
+    width: 60px;
+    height: 60px;
+    padding: 6px;
+    }
+  }
+  </style>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQGHCRF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <!--Google Translator-->
+  <!-- <div id="google_translate_element" style="float:right;"></div> -->
+  <!-- End Google Translator-->
+</body>
+
+</html>

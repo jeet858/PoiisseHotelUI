@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> actions/UserAction.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">eCommerce - API</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="addQuantity.html">addQuantity</a></li><li><a href="addToCart.html">addToCart</a></li><li><a href="checkOutOrder.html">checkOutOrder</a></li><li><a href="cleanDiscount.html">cleanDiscount</a></li><li><a href="clearCart.html">clearCart</a></li><li><a href="clearCategory.html">clearCategory</a></li><li><a href="clearOrder.html">clearOrder</a></li><li><a href="clearVariants.html">clearVariants</a></li><li><a href="filterByCategory.html">filterByCategory</a></li><li><a href="getCategoryList.html">getCategoryList</a></li><li><a href="getCompanyInfo.html">getCompanyInfo</a></li><li><a href="getCustomerDetails.html">getCustomerDetails</a></li><li><a href="getfeaturedItems.html">getfeaturedItems</a></li><li><a href="getIP.html">getIP</a></li><li><a href="getItemsByVariant.html">getItemsByVariant</a></li><li><a href="getProductsList.html">getProductsList</a></li><li><a href="PinModal.html">PinModal</a></li><li><a href="placeOrder.html">placeOrder</a></li><li><a href="previewCart.html">previewCart</a></li><li><a href="reducer.html">reducer</a></li><li><a href="removeItem.html">removeItem</a></li><li><a href="selectCategory.html">selectCategory</a></li><li><a href="selectProduct.html">selectProduct</a></li><li><a href="sendOtp.html">sendOtp</a></li><li><a href="set_fname.html">set_fname</a></li><li><a href="setCartBounce.html">setCartBounce</a></li><li><a href="setMenuState.html">setMenuState</a></li><li><a href="setMobileState.html">setMobileState</a></li><li><a href="setModal.html">setModal</a></li><li><a href="setPinModal.html">setPinModal</a></li><li><a href="setPromModal.html">setPromModal</a></li><li><a href="setSearchTerm.html">setSearchTerm</a></li><li><a href="setVariantModal.html">setVariantModal</a></li><li><a href="subtractQuantity.html">subtractQuantity</a></li><li><a href="toggleMenuState.html">toggleMenuState</a></li><li><a href="validateDiscount.html">validateDiscount</a></li><li><a href="validateOtp.html">validateOtp</a></li><li><a href="validatePin.html">validatePin</a></li></ul><h3>Global</h3><ul><li><a href="global.html#API">API</a></li><li><a href="global.html#CartAction">CartAction</a></li><li><a href="global.html#CategoryAction">CategoryAction</a></li><li><a href="global.html#CheckoutAction">CheckoutAction</a></li><li><a href="global.html#HomeAction">HomeAction</a></li><li><a href="global.html#initialState">initialState</a></li><li><a href="global.html#LocationAction">LocationAction</a></li><li><a href="global.html#onlyfordevelopmentpurpose">only for development purpose</a></li><li><a href="global.html#pinChangeHandler">pinChangeHandler</a></li><li><a href="global.html#pinProceedHandler">pinProceedHandler</a></li><li><a href="global.html#ProductsAction">ProductsAction</a></li><li><a href="global.html#SearchAction">SearchAction</a></li><li><a href="global.html#USER_FIRST_NAME">USER_FIRST_NAME</a></li><li><a href="global.html#UserAction">UserAction</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>actions/UserAction.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {apiAction} from '../middleware/api/apiActions';
+import API from './APIConst';
+
+/**
+ * Constants defination 
+ */
+const USER_FIRST_NAME = "USER_FIRST_NAME";
+const USER_LAST_NAME = "USER_LAST_NAME";
+const USER_PHONE = "USER_PHONE";
+const USER_EMAIL = "USER_EMAIL";
+const USER_ADDRESS_1 = "USER_ADDRESS_1";
+const USER_ADDRESS_2 = "USER_ADDRESS_2";
+const USER_PINCODE = "USER_PINCODE";
+const USER_CITY = "USER_CITY";
+const USER_DISTRICT = "USER_DISTRICT";
+const USER_STATE = "USER_STATE";
+const USER_COUNTRY = "USER_COUNTRY";
+const ADDRESS_TYPE = "ADDRESS_TYPE";
+const ADDRESS_ID = "ADDRESS_ID";
+const CUSTOMER_DETAILS = "CUSTOMER_DETAILS";
+const OTP_VALIDATION = 'OTP_VALIDATION';
+const CLEAR_DETAILS = "CLEAR_DETAILS";
+const OTP_SEND_STATUS = "OTP_SEND_STATUS";
+/**
+ * Actions defination
+ * @constructor
+ * @param {*} param 
+ */
+export const set_fname = (param) => ({ type: USER_FIRST_NAME, payload: param })
+export const set_lname = (param) => ({ type: USER_LAST_NAME, payload: param })
+export const set_phone = (param) => ({ type: USER_PHONE, payload: param })
+export const set_email = (param) => ({ type: USER_EMAIL, payload: param })
+export const set_address1 = (param) => ({ type: USER_ADDRESS_1, payload: param })
+export const set_address2 = (param) => ({ type: USER_ADDRESS_2, payload: param })
+export const set_pin = (param) => ({ type: USER_PINCODE, payload: param })
+export const set_city = (param) => ({ type: USER_CITY, payload: param })
+export const set_dist = (param) => ({ type: USER_DISTRICT, payload: param })
+export const set_state = (param) => ({ type: USER_STATE, payload: param })
+export const set_country = (param) => ({ type: USER_COUNTRY, payload: param })
+export const set_addressType = (param) => ({ type: ADDRESS_TYPE, payload: param })
+export const set_addressId = (param) => ({ type: ADDRESS_ID, payload: param})
+export const clear_userDetails = () => ({ type: CLEAR_DETAILS })
+/**
+ * Action getCustomerDetails defined.
+ * @constructor
+ * @param {string} param - Pass param to update the payload.
+ */ 
+export const getCustomerDetails = (obj) => {
+    return apiAction({
+        url: API.GET_CUSTOMER_DETAILS+`CompId=${obj.companyid}&amp;Phone=${obj.phone}`, 
+        onSuccess: setCustomerDetails,
+        onFailure: () => console.log("Error occured in getCustomerDetails"),
+        callback: 'getCustomerDetails',
+        label: CUSTOMER_DETAILS
+      });
+}
+
+export const setCustomerDetails = param => {
+    console.log(param);
+    return {
+        type: CUSTOMER_DETAILS,
+        payload: param
+    }
+  };
+
+/**
+ * Action validateOtp defined.
+ * @constructor
+ * @param {object} param - Pass param to update the payload.
+ */
+export const validateOtp = (obj) => {
+    return apiAction({
+        url: API.VALIDATE_OTP,
+        method: "post",
+        data: obj,
+        onSuccess: setValidateOtp,
+        onFailure: () => console.log("Error occured in validateOtp"),
+        callback: 'validateOtp',
+        label: OTP_VALIDATION
+    });
+}
+
+export const setValidateOtp = param => ({
+    type: OTP_VALIDATION,
+    payload: param.valid
+});
+
+/**
+ * Action sendOtp defined.
+ * @constructor
+ * @param {string} param - Pass param to update the payload.
+ */ 
+export const sendOtp = (obj) => {
+    return apiAction({
+        url: API.SEND_OTP, 
+        method: "post",
+        data: obj,
+        onSuccess: setOtpSent,
+        onFailure: () => console.log("Error occured in sendOtp"),
+        label: OTP_SEND_STATUS
+      });
+}
+
+export const setOtpSent = param => ({
+    type: OTP_SEND_STATUS,
+    payload: param
+  });
+
+
+/**
+ * set up with initial state.
+ */
+const initialState = {
+    addrid: '',
+    fname: '',
+    lname: '',
+    phone: '',
+    email: '',
+    address1: '',
+    address2: '',
+    pin: '',
+    city: '',
+    dist: '',
+    state: '',
+    country: '',
+    type: -1,
+    addressTypes: [],
+    customerDetails: [],
+    valid_otp: false,
+    valiDated_Otp: false,
+    otpSendStatus: { Status:1} //hard coded for temporary test
+}
+
+/**
+ * reducer .
+ * @constructor
+ * @param {string} state - state of the data shape.
+ * @param {string} action - action payload passed for data updates.
+ */
+let reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case USER_FIRST_NAME: return {...state, fname: action.payload }
+        case USER_LAST_NAME: return {...state, lname: action.payload }
+        case USER_PHONE: return {...state, phone: action.payload, valiDated_Otp: false }
+        case USER_EMAIL: return {...state, email: action.payload }
+        case USER_ADDRESS_1: return {...state, address1: action.payload }
+        case USER_ADDRESS_2: return {...state, address2: action.payload }
+        case USER_PINCODE: return {...state, pin: action.payload }
+        case USER_CITY: return {...state, city: action.payload }
+        case USER_DISTRICT: return {...state, dist: action.payload }
+        case USER_STATE: return {...state, state: action.payload }
+        case ADDRESS_ID: return {...state, addrid: action.payload }
+        case USER_COUNTRY: return {...state, country: action.payload }
+        case ADDRESS_TYPE : return {...state, type: action.payload }
+        case CUSTOMER_DETAILS: return {...state, customerDetails: action.payload.data, addressTypes: action.payload.type}
+        case OTP_VALIDATION: return {...state, valid_otp: action.payload, valiDated_Otp: action.payload}
+        case OTP_SEND_STATUS: return {...state, otpSendStatus: action.payload}
+        case CLEAR_DETAILS: return initialState
+        default: return state;
+    }
+}
+
+/**
+ * Export Object (Action + Reducer)
+ */
+const UserAction = {
+    reducer: reducer,
+    actions: {
+        sendOtp,
+        getCustomerDetails,
+        clear_userDetails,
+        validateOtp
+    }
+}
+
+export default UserAction</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

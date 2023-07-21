@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/checkout/PhoneValidate_ash.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">eCommerce - API</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="addQuantity.html">addQuantity</a></li><li><a href="addToCart.html">addToCart</a></li><li><a href="checkOutOrder.html">checkOutOrder</a></li><li><a href="cleanDiscount.html">cleanDiscount</a></li><li><a href="clearCart.html">clearCart</a></li><li><a href="clearCategory.html">clearCategory</a></li><li><a href="clearOrder.html">clearOrder</a></li><li><a href="clearVariants.html">clearVariants</a></li><li><a href="filterByCategory.html">filterByCategory</a></li><li><a href="getCategoryList.html">getCategoryList</a></li><li><a href="getCompanyInfo.html">getCompanyInfo</a></li><li><a href="getCustomerDetails.html">getCustomerDetails</a></li><li><a href="getfeaturedItems.html">getfeaturedItems</a></li><li><a href="getIP.html">getIP</a></li><li><a href="getItemsByVariant.html">getItemsByVariant</a></li><li><a href="getProductsList.html">getProductsList</a></li><li><a href="PinModal.html">PinModal</a></li><li><a href="placeOrder.html">placeOrder</a></li><li><a href="previewCart.html">previewCart</a></li><li><a href="reducer.html">reducer</a></li><li><a href="removeItem.html">removeItem</a></li><li><a href="selectCategory.html">selectCategory</a></li><li><a href="selectProduct.html">selectProduct</a></li><li><a href="sendOtp.html">sendOtp</a></li><li><a href="set_fname.html">set_fname</a></li><li><a href="setCartBounce.html">setCartBounce</a></li><li><a href="setMenuState.html">setMenuState</a></li><li><a href="setMobileState.html">setMobileState</a></li><li><a href="setModal.html">setModal</a></li><li><a href="setPinModal.html">setPinModal</a></li><li><a href="setPromModal.html">setPromModal</a></li><li><a href="setSearchTerm.html">setSearchTerm</a></li><li><a href="setVariantModal.html">setVariantModal</a></li><li><a href="subtractQuantity.html">subtractQuantity</a></li><li><a href="toggleMenuState.html">toggleMenuState</a></li><li><a href="validateDiscount.html">validateDiscount</a></li><li><a href="validateOtp.html">validateOtp</a></li><li><a href="validatePin.html">validatePin</a></li></ul><h3>Global</h3><ul><li><a href="global.html#API">API</a></li><li><a href="global.html#CartAction">CartAction</a></li><li><a href="global.html#CategoryAction">CategoryAction</a></li><li><a href="global.html#CheckoutAction">CheckoutAction</a></li><li><a href="global.html#HomeAction">HomeAction</a></li><li><a href="global.html#initialState">initialState</a></li><li><a href="global.html#LocationAction">LocationAction</a></li><li><a href="global.html#onlyfordevelopmentpurpose">only for development purpose</a></li><li><a href="global.html#pinChangeHandler">pinChangeHandler</a></li><li><a href="global.html#pinProceedHandler">pinProceedHandler</a></li><li><a href="global.html#ProductsAction">ProductsAction</a></li><li><a href="global.html#SearchAction">SearchAction</a></li><li><a href="global.html#USER_FIRST_NAME">USER_FIRST_NAME</a></li><li><a href="global.html#UserAction">UserAction</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/checkout/PhoneValidate_ash.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useRef, useEffect } from 'react';
+import { Row, Col, Button, Card } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { set_phone, getCustomerDetails, validateOtp, sendOtp } from '../../actions/UserAction';
+import ResendOtp from './ResendOtp';
+
+const PhoneValidate = (props) => {
+
+    const [state, setState] = useState("phone");
+    const [phonenumber, setPhonenumber] = useState("");
+    const [otp, setOtp] = useState(["", "", "", ""]);
+    const [validOtp, setValidotp] = useState(false);
+    const ref1 = useRef(null)
+    const ref2 = useRef(null)
+    const ref3 = useRef(null)
+    const ref4 = useRef(null)
+    const ref5 = useRef(null)
+ 
+     
+    /* useEffect(() => {
+        if(props.phone) {
+            setPhonenumber(props.phone);
+            if(props.valid_otp) {
+                setValidotp(true);
+                props.setPhnCard(false);
+                props.setAddressCard(true);
+            }
+        }
+    }, [props.phone]);  */
+
+    useEffect(() => {
+        if(props.valid_otp) {
+            setValidotp(true);
+            //props.getCustomerDetails({companyid:props.companyid,phone:props.phone})
+            //setTimeout(()=>{props.setPhnCard(false);props.setAddressCard(true);}, 500)
+        }
+    },[props.valid_otp])
+    
+    /**
+     *@function
+     * only for development purpose 
+     */
+    /* useEffect(() => {
+        if(props.debug) {
+            props.setPhnCard(false);
+            props.setAddressCard(true);
+        }
+    }, [props.debug]); */
+
+    const editPhoneNumber = () =>{
+        setValidotp(false);
+        setState("phone");
+        props.setPhnCard(true);
+        props.setAddressCard(false);
+    }
+
+    const handleClick = () => {
+        if (state === "phone") {
+            if (phonenumber.length === 10) {
+                setState("otp");
+                props.set_phone(phonenumber);
+                props.sendOtp({companyid:props.companyid,phone:phonenumber})
+            }
+        } else {
+            console.log({companyid:props.companyid, phone: phonenumber, otp: otp.join('')});
+            if (otp.length === 4) {
+                props.validateOtp({companyid:props.companyid, phone: phonenumber, otp: otp.join('')})
+            }
+        }
+    }
+
+    /* const reqOtpClicked = () => {
+        if (phonenumber.length === 10) {
+            setState("otp");
+            props.set_phone(phonenumber);
+            props.sendOtp({companyid:props.companyid,phone:phonenumber})
+        }
+    }
+
+    const verifyOtpClicked = () => {
+        if (otp.length === 4) {
+            props.validateOtp({companyid:props.companyid, phone: phonenumber, otp: otp.join('')})
+        }
+    }
+
+    const isPhoneValidated = () => {
+        return props.valid_otp
+    } */
+
+    const handlePhonenumberChange = (e) => {
+        if (e.target.value.length &lt;= 10) {
+            setPhonenumber(e.target.value)
+        }
+    }
+    const handleOtpChange = (e, i) => {
+        let copyOtp = [...otp]
+        if (e.target.value.length &lt;= 1) {
+            copyOtp[i] = e.target.value
+            setOtp(copyOtp)
+        }
+        if (otp[i] === "") {
+            switch (i + 1) {
+                case 1:
+                    {
+                        ref2.current.focus();
+                        break
+                    }
+                case 2:
+                    {
+                        ref3.current.focus();
+                        break
+                    }
+                case 3:
+                    {
+                        ref4.current.focus();
+                        break
+                    }
+                case 4:
+                    {
+                        ref5.current.focus();
+                        break
+                    }
+                default: return null
+            }
+        }
+    }
+
+    const checkValidity = () => {
+        if (state === "phone") {
+            if (phonenumber.length === 10) {
+                return false
+            }
+        } else {
+            if (otp[0] !== "" &amp;&amp; otp[1] !== "" &amp;&amp; otp[2] !== "" &amp;&amp; otp[3] !== "") {
+                return false
+            }
+        }
+        return true
+    }
+
+
+    const renderPhoneField = () => {
+
+    }
+
+    const renderOtpField = () => {
+
+    }
+
+
+    return (
+        &lt;Card className="mb-2">
+            &lt;Card.Header className="bgf2f2f2">
+            {validOtp ? &lt;i className="fa fa-check-circle text-dark f-size22" aria-hidden="true">&lt;/i> : &lt;label className="number-before-check">1&lt;/label>} &amp;nbsp;
+                Phone Number
+                {state === "otp" || validOtp ? &lt;span className="float-right"> {phonenumber}&lt;i style={{ cursor: "pointer", margin: "2px" }} onClick={editPhoneNumber} className="fa fa-pencil float-right">&lt;/i>&lt;/span> : ""}
+            &lt;/Card.Header>
+            &lt;Card.Body style={{ display: props.phnCard ? "block" : "none" }}>
+                &lt;Row>
+                &lt;Col md="9 pl-0 pr-0-mob">
+
+{(state === "phone") ?
+    &lt;Row>
+        &lt;p className="w-100 fs-13-f-n">Enter Your Phone Number&lt;/p>
+        &lt;input className="form-control" placeholder="Phone Number" type="number" value={phonenumber} onChange={handlePhonenumberChange} />
+    &lt;/Row> :
+
+    (!validOtp ?
+        &lt;Row>
+            &lt;p className="w-100 fs-13-f-n">Enter Your OTP&lt;/p>
+            &lt;Col md="3 pl-0" xs="3">
+                &lt;input className="form-control p-0-5-tab" ref={ref1} value={otp[0]} onChange={(e) => handleOtpChange(e, 0)} />
+            &lt;/Col>
+            &lt;Col md="3 pl-0" xs="3">
+                &lt;input className="form-control p-0-5-tab" ref={ref2} value={otp[1]} onChange={(e) => handleOtpChange(e, 1)} />
+            &lt;/Col>
+            &lt;Col md="3 pl-0" xs="3">
+                &lt;input className="form-control p-0-5-tab" ref={ref3} value={otp[2]} onChange={(e) => handleOtpChange(e, 2)} />
+            &lt;/Col>
+            &lt;Col md="3 pl-0" xs="3">
+                &lt;input className="form-control p-0-5-tab" ref={ref4} value={otp[3]} onChange={(e) => handleOtpChange(e, 3)} />
+            &lt;/Col>
+            {/* &lt;label className="fs-13-f-n mt-2">Phone Number:&lt;span className="text-dark">&lt;b> {phonenumber} &lt;/b>&lt;/span>
+            &lt;i style={{ cursor: "pointer", margin: "2px" }} onClick={()=>setState('phone')} className="fa fa-pencil float-right">&lt;/i>
+            &lt;/label> */}
+            &lt;ResendOtp/>
+        &lt;/Row> :
+        &lt;Row>
+
+            &lt;label>Phone Number: &lt;span className="text-dark">&lt;b>{phonenumber}&lt;/b>&lt;/span> &lt;/label>&amp;nbsp;&lt;p> verified&lt;/p>
+        &lt;/Row>)
+}
+
+&lt;/Col>
+&lt;Col md="3 text-right pr-0">
+&lt;p className="w-100 fs-13-f-n">&amp;nbsp;&lt;/p>
+{!validOtp ? &lt;Button ref={ref5} onClick={handleClick} disabled={checkValidity()} className="btn btn-success bgpinbutton">Next&lt;/Button> : ""}
+&lt;/Col>
+                &lt;/Row>
+            &lt;/Card.Body>
+        &lt;/Card>
+    )
+}
+
+const mapStateToProps = state => ({
+    phone:state.UserData.phone,
+    otpSendStatus:state.UserData.otpSendStatus,
+    valid_otp:state.UserData.valid_otp,
+    companyid: state.HomeData.companyid
+})
+
+export default connect(mapStateToProps, { set_phone, getCustomerDetails, validateOtp, sendOtp })(PhoneValidate);  </code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

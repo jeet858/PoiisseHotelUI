@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/checkout/Address_ash.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">eCommerce - API</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="addQuantity.html">addQuantity</a></li><li><a href="addToCart.html">addToCart</a></li><li><a href="checkOutOrder.html">checkOutOrder</a></li><li><a href="cleanDiscount.html">cleanDiscount</a></li><li><a href="clearCart.html">clearCart</a></li><li><a href="clearCategory.html">clearCategory</a></li><li><a href="clearOrder.html">clearOrder</a></li><li><a href="clearVariants.html">clearVariants</a></li><li><a href="filterByCategory.html">filterByCategory</a></li><li><a href="getCategoryList.html">getCategoryList</a></li><li><a href="getCompanyInfo.html">getCompanyInfo</a></li><li><a href="getCustomerDetails.html">getCustomerDetails</a></li><li><a href="getfeaturedItems.html">getfeaturedItems</a></li><li><a href="getIP.html">getIP</a></li><li><a href="getItemsByVariant.html">getItemsByVariant</a></li><li><a href="getProductsList.html">getProductsList</a></li><li><a href="PinModal.html">PinModal</a></li><li><a href="placeOrder.html">placeOrder</a></li><li><a href="previewCart.html">previewCart</a></li><li><a href="reducer.html">reducer</a></li><li><a href="removeItem.html">removeItem</a></li><li><a href="selectCategory.html">selectCategory</a></li><li><a href="selectProduct.html">selectProduct</a></li><li><a href="sendOtp.html">sendOtp</a></li><li><a href="set_fname.html">set_fname</a></li><li><a href="setCartBounce.html">setCartBounce</a></li><li><a href="setMenuState.html">setMenuState</a></li><li><a href="setMobileState.html">setMobileState</a></li><li><a href="setModal.html">setModal</a></li><li><a href="setPinModal.html">setPinModal</a></li><li><a href="setPromModal.html">setPromModal</a></li><li><a href="setSearchTerm.html">setSearchTerm</a></li><li><a href="setVariantModal.html">setVariantModal</a></li><li><a href="subtractQuantity.html">subtractQuantity</a></li><li><a href="toggleMenuState.html">toggleMenuState</a></li><li><a href="validateDiscount.html">validateDiscount</a></li><li><a href="validateOtp.html">validateOtp</a></li><li><a href="validatePin.html">validatePin</a></li></ul><h3>Global</h3><ul><li><a href="global.html#API">API</a></li><li><a href="global.html#CartAction">CartAction</a></li><li><a href="global.html#CategoryAction">CategoryAction</a></li><li><a href="global.html#CheckoutAction">CheckoutAction</a></li><li><a href="global.html#HomeAction">HomeAction</a></li><li><a href="global.html#initialState">initialState</a></li><li><a href="global.html#LocationAction">LocationAction</a></li><li><a href="global.html#onlyfordevelopmentpurpose">only for development purpose</a></li><li><a href="global.html#pinChangeHandler">pinChangeHandler</a></li><li><a href="global.html#pinProceedHandler">pinProceedHandler</a></li><li><a href="global.html#ProductsAction">ProductsAction</a></li><li><a href="global.html#SearchAction">SearchAction</a></li><li><a href="global.html#USER_FIRST_NAME">USER_FIRST_NAME</a></li><li><a href="global.html#UserAction">UserAction</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/checkout/Address_ash.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect } from 'react';
+import { Form, Col, Row, Card, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+
+import {
+    set_fname,
+    set_lname,
+    set_email,
+    set_address1,
+    set_address2,
+    set_city,
+    set_dist,
+    set_state,
+    set_country, set_pin, set_addressType, set_addressId
+} from '../../actions/UserAction';
+import { set_special_request } from '../../actions/CheckoutAction';
+
+
+const Address = (props) => {
+    
+    const [formData, setFormData] = useState({
+        addrid:-1,
+        email: "",
+        fname: "",
+        lname: "",
+        address1: "",
+        address2: "",
+        city: "",
+        dist: "",
+        state: "",
+        pin: "",
+        rqst: "",
+        type: ""
+    })
+
+    const [validated, setValidated] = useState(false);
+    const [formVerified, setFormVerified] = useState(true);
+    const [addressSelected, setAddressSelected] = useState(false);
+    const [customerDetails, setCustomerDetails] = useState([]);
+
+    const { email, fname, lname, address1, address2, city, state, pin, rqst, dist, type } = formData;
+    
+    const selectAddressType = (e) => {
+        setFormData({...formData, type: e.target.value})
+        //console.log(e.target.value)
+    }
+    const handleOnclick = (event) => {
+        
+        const form = event.currentTarget;
+        console.log("handleOnclick ", form.checkValidity());
+
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+        event.preventDefault();
+        if (form.checkValidity() === true) {
+            const copyDetails = [...customerDetails]
+            copyDetails.push(formData)
+            setCustomerDetails(copyDetails)
+            setFormVerified(true)
+        }
+    }
+
+    const setFinalAddress = (item) => {
+        //+++++++++++++++++++++++++
+        props.set_fname(item.fname);
+        props.set_lname(item.lname);
+        props.set_email(item.email);
+        props.set_address1(item.address1);
+        props.set_address2(item.address2);
+        props.set_city(item.city);
+        props.set_state(item.state);
+        props.set_dist(item.dist);
+        props.set_pin(item.pin);
+        props.set_special_request(item.rqst);
+        props.set_addressType(item.type);
+        props.set_addressId(item.addrid)
+        //+++++++++++++++++++++++++
+    }
+    const selectAddress = (data) => {
+        setFormData(data)
+        setFinalAddress(data);
+        setAddressSelected(true);
+        
+        setTimeout(() => { props.setAddressCard(false); props.setDeliveryCard(true); }, 500);
+    }
+    
+    /**
+     *@function
+     * only for development purpose 
+     */
+    /* useEffect(() => {
+        if(props.debug) {
+            props.setAddressCard(false); 
+            props.setDeliveryCard(true);
+        }
+    }, [props.debug]); */
+    
+    const selectThisAddress = (address) => {
+        setFormData(address)
+    }
+
+    /* useEffect(()=>{
+        if(props.customerDetails.length === 0) {
+            setFormVerified(false)
+        }
+        else {
+            setCustomerDetails(props.customerDetails)
+            setFormVerified(true)
+        }
+    },[props.customerDetails]) */
+    
+    useEffect(() => {
+        handleOnChange({target:{name:"pin", value:props.pincode}})
+        // eslint-disable-next-line 
+    },[props.pincode])
+
+    const renderAddresses = () => {
+        let list = [];
+        if(props.customerDetails.length>0){
+            list = props.customerDetails.map((item, i) => {
+                return (
+                    &lt;Col md="6" className="pl-0 mb-1" key={i}>
+                        &lt;Card>
+                            &lt;Card.Header>
+                                &lt;p>
+                                    &lt;i style={{ cursor: "pointer" }} onClick={()=>addressChangeHandler(item,i)} className="fa fa-pencil float-right">&lt;/i>
+                                &lt;/p>
+                            &lt;/Card.Header>
+                            &lt;Card.Body>
+                                    
+                                &lt;Row>
+                                    &lt;Col className="pl-0">{`${item.fname} ${item.lname}, ${item.address1}, ${item.city}, ${item.state}, ${item.pin}`}&lt;/Col>
+                                &lt;/Row>
+                                    
+                            &lt;/Card.Body>
+                            &lt;Card.Footer>
+                                &lt;Button onClick={() => selectAddress(item)}>Deliver Here&lt;/Button>
+                            &lt;/Card.Footer>
+                        &lt;/Card>
+                    &lt;/Col>
+                )
+            })
+       }
+       
+        return list; 
+    } 
+    const handleOnChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+    const addAddressHandler = () => {
+        handleOnChange({target:{name:"pin", value:props.pincode}})
+        setFormVerified(false);
+    }
+    const addressChangeHandler = (data,i) => {
+        console.log("addressChangeHandler", data);
+        const copyDetails = [...customerDetails]
+        copyDetails.splice(i,1)
+        setCustomerDetails(copyDetails)
+        selectThisAddress(data)
+        setFormVerified(false);
+        props.setAddressCard(true);
+    }
+
+    const isReturningUser = () => {
+        return (props.customerDetails.length>0) ? true : false
+    }
+
+
+    /* const newAddressForm = () => {
+        return ()
+    } */
+
+    
+    return (
+        &lt;React.Fragment>
+            &lt;Card className="mb-2">
+                &lt;Card.Header className="bgf2f2f2">
+                    {isReturningUser() 
+                        ? &lt;i className="fa fa-check-circle text-dark f-size22" aria-hidden="true">&lt;/i> 
+                        : &lt;label className="number-before-check">2&lt;/label>
+                    } &amp;nbsp; Address &lt;button className="float-right btn btn-link" onClick={addAddressHandler}> + Add New Address&lt;/button>
+                    {isReturningUser() ?
+                        &lt;div>
+                            &lt;Row>
+                                &lt;Col md="6 pl-0 mb-1">
+                                    &lt;Row>
+                                        &lt;Col className="pl-0">{`${fname} ${lname}, ${address1}, ${city}, ${state}, ${pin}`}&lt;/Col>
+                                    &lt;/Row>
+                                &lt;/Col>
+                            &lt;/Row>
+                        &lt;/div> : ""}
+                &lt;/Card.Header>
+                &lt;Card.Body style={{ display: isReturningUser() ? "none" : "block" }}>
+                {isReturningUser() ?
+                    &lt;Form noValidate validated={validated} onSubmit={handleOnclick} className="mb-0">
+                        &lt;Form.Row>
+                            &lt;Form.Group as={Col} >
+                                &lt;Form.Label>First Name&lt;/Form.Label>
+                                &lt;Form.Control placeholder="First Name" value={fname}
+                                    name="fname" onChange={handleOnChange} required />
+                            &lt;/Form.Group>
+
+                            &lt;Form.Group as={Col} >
+                                &lt;Form.Label>Last Name&lt;/Form.Label>
+                                &lt;Form.Control placeholder="Last Name" value={lname}
+                                    name="lname" onChange={handleOnChange} required />
+                            &lt;/Form.Group>
+                        &lt;/Form.Row>
+                        &lt;Form.Group>
+                            &lt;Form.Label>Email&lt;/Form.Label>
+                            &lt;Form.Control type="email" placeholder="Enter Email" value={email}
+                                name="email" onChange={handleOnChange} required />
+                        &lt;/Form.Group>
+                        &lt;Form.Group >
+                            &lt;Form.Label>Address Line 1&lt;/Form.Label>
+                            &lt;Form.Control placeholder="Number &amp; Street" value={address1}
+                                name="address1" onChange={handleOnChange} required />
+                        &lt;/Form.Group>
+
+                        &lt;Form.Group >
+                            &lt;Form.Label>Address Line 2&lt;/Form.Label>
+                            &lt;Form.Control placeholder="Number &amp; Street" value={address2}
+                                name="address2" onChange={handleOnChange} />
+                        &lt;/Form.Group>
+
+                        &lt;Form.Row>
+                            &lt;Form.Group as={Col}>
+                                &lt;Form.Label>City&lt;/Form.Label>
+                                &lt;Form.Control value={city}
+                                    name="city" onChange={handleOnChange} required />
+                            &lt;/Form.Group>
+                            &lt;Form.Group as={Col}>
+                                &lt;Form.Label>District&lt;/Form.Label>
+                                &lt;Form.Control value={dist}
+                                    name="dist" onChange={handleOnChange} required />
+                            &lt;/Form.Group>
+                        &lt;/Form.Row>
+                        &lt;Form.Row>
+                            &lt;Form.Group as={Col}>
+                                &lt;Form.Label>State&lt;/Form.Label>
+                                &lt;Form.Control value={state}
+                                    name="state" onChange={handleOnChange} required />
+                            &lt;/Form.Group>
+
+                            &lt;Form.Group as={Col}>
+                                &lt;Form.Label>PIN&lt;/Form.Label>
+                                &lt;Form.Control value={pin}
+                                    name="pin" readOnly type="number" required />
+                            &lt;/Form.Group>
+                        &lt;/Form.Row>
+                        &lt;Form.Group>
+                            &lt;Form.Label>Special Request&lt;/Form.Label>
+                            &lt;Form.Control as="textarea" name="rqst" value={rqst} onChange={handleOnChange} rows="3" />
+                        &lt;/Form.Group>
+                        &lt;Form.Group>
+                            &lt;Form.Label>Address Type&lt;/Form.Label>
+                            &lt;Form.Control value={type} onChange={selectAddressType}
+                                as="select"> 
+                                &lt;option value={-1} disabled>Select Address Type&lt;/option>
+                                {/* {props.addressTypes.map(item => {
+                                    return (
+                                        &lt;option key={item.id} value={item.id}>{item.type}&lt;/option>
+                                    )
+                                })} */}
+                            &lt;/Form.Control>
+                        &lt;/Form.Group>
+                        &lt;Col md="12 text-right p-0">
+                            &lt;button className="btn btn-success bgpinbutton" type="submit" >Next&lt;/button>
+                        &lt;/Col>
+                    &lt;/Form> :
+                    renderAddresses()}
+                &lt;/Card.Body>
+            &lt;/Card>
+        &lt;/React.Fragment >
+    )
+}
+
+const mapStateToProps = state => ({
+    pincode: state.LocationData.pin,
+    customerDetails: state.UserData.customerDetails,
+    addressTypes: state.UserData.addressTypes
+})
+
+export default connect(mapStateToProps, {
+    set_fname, set_lname, set_email, set_addressType,
+    set_address1, set_address2, set_city, set_dist, set_state, set_country, set_pin, set_special_request, set_addressId
+})(Address);</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

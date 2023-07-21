@@ -1,0 +1,31 @@
+.vs/**
+
+# Stylesheets
+.sass-cache/
+*.css.map
+
+# Node Modules
+node_modules/**
+node_modules
+# JS Mapping files
+*.js.map
+
+# Misc
+.DS_Store
+.vscode
+
+.env**
+.env**
+db.json
+routes.json
+misc.txt
+deploy.js
+templates/**
+build/**
+misc.txt
+iisConfig
+ignore
+rest.http
+package-lock.json
+public/config.json
+src/config.js

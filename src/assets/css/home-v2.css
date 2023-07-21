@@ -1,0 +1,137 @@
+@media (min-width: 1300px) {
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1280px;
+}
+}
+*{
+    font-family: Roboto;
+}
+body{
+    background-color: #FFF;
+}
+.main-header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 99;
+    background-color: #fff;
+}
+.mains-wrapper{
+    margin-top: 122px;
+}
+.four-icondiv{
+    display: flex;
+}
+.four-icondiv span{
+    text-align: center;
+    margin: 0 25px 0 0;
+    display: inline-grid;
+    font-size: 13px;
+    cursor: pointer;
+}
+.four-icondiv span i{
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+.logo-div a {
+    color: #000;
+    font-size: 28px;
+    text-decoration: none !important;
+}
+.top-header {
+    border-bottom: 1px solid #efeded;
+    padding: 10px 0;
+}
+.navbar-navdiv .nav-link{
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+    font-size: 14px;
+    color: #000 !important;
+}
+.navbar-navdiv .nav-link:hover{
+    color:#F27935 !important;
+    transition: 0.3s;
+}
+.nav-link-all .nav-link{
+    padding-left: 0 !important;
+}
+.bottom-header{
+    border-bottom: 1px solid #dadada;
+    box-shadow: 6px 1px 6px #dadada;
+}
+.all-hamberger{
+    color:#F27935;
+}
+.home-pageslider .carousel-control-prev, .carousel-control-next{
+    width:40px !important;
+    top: 30% !important;
+    background: #f27935;
+    height: 40% !important;
+    opacity: 1 !important;
+}
+.each-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.section-header{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.product-category-name{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+.product-category-images img{
+    height: 255px;
+    object-fit: contain;
+}
+.viewall-link{
+    color: #F27935;
+    font-weight: 600;
+    font-size: 14px;
+}
+.viewall-link:hover{
+    opacity: 0.8;
+    color: #F27935;
+    text-decoration: none;
+}
+.bestselling-discount{
+    background-color:#F27935;
+    padding: 20px 0px;
+}
+.bestselling-images img{
+    height: 255px;
+    object-fit: contain;
+}
+.double-arrow {
+    font-size: 20px;
+}
+.fourcolumn-per-images{
+    height: 221px;
+    object-fit: contain;
+}
+.item-four-smallname{
+    font-size: 13px;
+    margin: 5px 0 10px 0;
+    color: #000;
+}
+.fourcolumn-per-images-withheader{
+    height: 270px;
+    object-fit: contain;
+}
+.h-object-fit{
+    height: 75px;
+    object-fit: contain;
+}
+.trending-products .title{
+    display: none;
+}
+.trending-products .card{
+    height: 180px !important;
+}
+.trending-products .card img{
+    width:100%;
+    object-fit: contain;
+}

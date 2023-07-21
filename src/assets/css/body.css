@@ -1,0 +1,30 @@
+/* Define the keyframes for the animation */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px); /* Adjust this value as needed */
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the element */
+.element-to-moveRight {
+  animation: moveLeftToRight 2s linear; /* Adjust duration and timing function as needed */
+}
+
+@keyframes moveRightToleft {
+  0% {
+    transform: translateX(0px); /* Adjust this value as needed */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 1;
+  }
+}
+.element-to-moveLeft {
+  animation: moveRightToleft 2s linear;
+}

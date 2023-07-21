@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> actions/CheckoutAction.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">eCommerce - API</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="addQuantity.html">addQuantity</a></li><li><a href="addToCart.html">addToCart</a></li><li><a href="checkOutOrder.html">checkOutOrder</a></li><li><a href="cleanDiscount.html">cleanDiscount</a></li><li><a href="clearCart.html">clearCart</a></li><li><a href="clearCategory.html">clearCategory</a></li><li><a href="clearOrder.html">clearOrder</a></li><li><a href="clearVariants.html">clearVariants</a></li><li><a href="filterByCategory.html">filterByCategory</a></li><li><a href="getCategoryList.html">getCategoryList</a></li><li><a href="getCompanyInfo.html">getCompanyInfo</a></li><li><a href="getCustomerDetails.html">getCustomerDetails</a></li><li><a href="getfeaturedItems.html">getfeaturedItems</a></li><li><a href="getIP.html">getIP</a></li><li><a href="getItemsByVariant.html">getItemsByVariant</a></li><li><a href="getProductsList.html">getProductsList</a></li><li><a href="PinModal.html">PinModal</a></li><li><a href="placeOrder.html">placeOrder</a></li><li><a href="previewCart.html">previewCart</a></li><li><a href="reducer.html">reducer</a></li><li><a href="removeItem.html">removeItem</a></li><li><a href="selectCategory.html">selectCategory</a></li><li><a href="selectProduct.html">selectProduct</a></li><li><a href="sendOtp.html">sendOtp</a></li><li><a href="set_fname.html">set_fname</a></li><li><a href="setCartBounce.html">setCartBounce</a></li><li><a href="setMenuState.html">setMenuState</a></li><li><a href="setMobileState.html">setMobileState</a></li><li><a href="setModal.html">setModal</a></li><li><a href="setPinModal.html">setPinModal</a></li><li><a href="setPromModal.html">setPromModal</a></li><li><a href="setSearchTerm.html">setSearchTerm</a></li><li><a href="setVariantModal.html">setVariantModal</a></li><li><a href="subtractQuantity.html">subtractQuantity</a></li><li><a href="toggleMenuState.html">toggleMenuState</a></li><li><a href="validateDiscount.html">validateDiscount</a></li><li><a href="validateOtp.html">validateOtp</a></li><li><a href="validatePin.html">validatePin</a></li></ul><h3>Global</h3><ul><li><a href="global.html#API">API</a></li><li><a href="global.html#CartAction">CartAction</a></li><li><a href="global.html#CategoryAction">CategoryAction</a></li><li><a href="global.html#CheckoutAction">CheckoutAction</a></li><li><a href="global.html#HomeAction">HomeAction</a></li><li><a href="global.html#initialState">initialState</a></li><li><a href="global.html#LocationAction">LocationAction</a></li><li><a href="global.html#onlyfordevelopmentpurpose">only for development purpose</a></li><li><a href="global.html#pinChangeHandler">pinChangeHandler</a></li><li><a href="global.html#pinProceedHandler">pinProceedHandler</a></li><li><a href="global.html#ProductsAction">ProductsAction</a></li><li><a href="global.html#SearchAction">SearchAction</a></li><li><a href="global.html#USER_FIRST_NAME">USER_FIRST_NAME</a></li><li><a href="global.html#UserAction">UserAction</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>actions/CheckoutAction.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { apiAction } from '../middleware/api/apiActions';
+import API from './APIConst';
+
+const PLACE_ORDER = 'PLACE_ORDER';
+const CHECKOUT_ORDER = 'CHECKOUT_ORDER';
+const SET_MODAL = 'SET_MODAL';
+const SPECIAL_REQUEST = 'SPECIAL_REQUEST';
+const SET_PROMO_MODAL = 'SET_PROMO_MODAL';
+const VALIDATE_DISCOUNT = 'VALIDATE_DISCOUNT';
+const CLEAN_DISCOUNT = 'CLEAN_DISCOUNT';
+const CLEAR_ORDER = 'CLEAR_ORDER';
+/**
+ * Action placeOrder defined.
+ * @constructor
+ * @param {string} param - Pass param to update the payload.
+ */
+export const checkOutOrder = (obj) => {
+    return apiAction({
+        url: API.CHECKOUT_ORDER,
+        method: "post",
+        data: obj,
+        onSuccess: orderCheckedOut,
+        onFailure: () => console.log("Error occured in placeOrder"),
+        callback: 'checkOutOrder',
+        label: CHECKOUT_ORDER
+    });
+}
+
+
+export const orderCheckedOut = param => ({
+    type: CHECKOUT_ORDER,
+    payload: param.data
+});
+
+/**
+ * Action placeOrder defined.
+ * @constructor
+ * @param {string} param - Pass param to update the payload.
+ */
+export const placeOrder = (obj) => {
+    return apiAction({
+        url: API.PLACE_ORDER,
+        method: "post",
+        data: obj,
+        onSuccess: orderPlaced,
+        onFailure: () => console.log("Error occured in placeOrder"),
+        label: PLACE_ORDER
+    });
+}
+
+export const orderPlaced = param => ({
+    type: PLACE_ORDER,
+    payload: param.data
+});
+
+//...............................................................
+/**
+ * Action validateDiscount defined.
+ * @constructor
+ * @param {string} param - Pass param to update the payload.
+ */
+export const validateDiscount = (obj) => {
+    return apiAction({
+        url: API.VALIDATE_DISCOUNT,
+        method: "post",
+        data: obj,
+        onSuccess: discountValidated,
+        onFailure: () => console.log("Error occured in validateDiscount"),
+        label: VALIDATE_DISCOUNT
+    });
+}
+
+export const discountValidated = param => ({
+    type: VALIDATE_DISCOUNT,
+    payload: param.data
+});
+
+//...................................................................
+/**
+ * Action setModal defined.
+ * @constructor
+ * @param
+ */
+export const setModal = (param) => ({
+    type: SET_MODAL,
+    payload: param
+});
+//...................................................................
+/**
+ * Action setPromModal defined.
+ * @constructor
+ * @param
+ */
+export const setPromModal = (param) => ({
+    type: SET_PROMO_MODAL,
+    payload: param
+});
+//...................................................................
+/**
+ * Action cleanDiscount defined.
+ * @constructor
+ * @param
+ */
+export const cleanDiscount = () => ({
+    type: CLEAN_DISCOUNT,
+    payload: null
+});
+
+/**
+ * Action reset checkout.
+ * @constructor
+ * @param
+ */
+export const clearOrder = () => ({
+    type: CLEAR_ORDER,
+    payload: null
+});
+
+
+
+//................................................................... 
+export const set_special_request = (param) => ({ type: SPECIAL_REQUEST, payload: param })
+/**
+ * set up with initial state.
+ */
+const initialState = {
+    items: [],
+    checkoutDetails: {},
+    special_request: '',
+    payment_mode: 'COD',
+    delivery_slot: '',
+    selected_voucher: {},
+    confirmationModal: false,
+    promoModal: false,
+    order: {},
+    discountDetails: {}
+}
+
+/**
+ * reducer .
+ * @constructor
+ * @param {string} state - state of the data shape.
+ * @param {string} action - action payload passed for data updates.
+ */
+let reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case CLEAR_ORDER: return initialState
+        case PLACE_ORDER: return { ...state, order: action.payload, confirmationModal: true }
+        case CHECKOUT_ORDER: return { ...state, checkoutDetails: action.payload }
+        case SET_MODAL: return { ...state, confirmationModal: action.payload }
+        case SET_PROMO_MODAL: return { ...state, promoModal: action.payload }
+        case SPECIAL_REQUEST: return { ...state, special_request: action.payload }
+        case CLEAN_DISCOUNT: return { ...state, discountDetails: {}, selected_voucher: {} }
+        case VALIDATE_DISCOUNT: return {
+            ...state,
+            promoModal: false,
+            discountDetails: action.payload,
+            checkoutDetails: { ...state.checkoutDetails, ...action.payload.order },
+            selected_voucher: action.payload.vouchers
+        }
+        default: return state;
+    }
+}
+
+//...................................................................
+//.. selectors :: TODO
+export function selectCheckOutJSON(state) {
+    return {
+        "companyid": state.HomeData.companyid,
+        "delivery": {
+            "pincode": state.LocationData.pin
+        },
+        "ordered": {
+            "items": state.CartData.cartList.map(item => {
+                return {
+                    id: item.id,
+                    variantid: item.variantid,
+                    rate: item.price_regular,
+                    quantity: item.quantity,
+                    status: "order placed"
+                }
+            })
+        }
+    }
+}
+
+export function selectValidateDiscountJSON(state) {
+    return {
+        "companyid": state.HomeData.companyid,
+        "order": {
+            "date": state.CheckoutData.checkoutDetails.date,
+            "totalamt": state.CartData.totalAmount,
+            "totaltaxamt": state.CheckoutData.checkoutDetails.totaltaxamt,
+            "deliverychargeamt": state.CheckoutData.checkoutDetails.deliverychargeamt,
+            "grandtotalamt": state.CheckoutData.checkoutDetails.grandtotalamt
+        }
+    }
+}
+export function selectPlaceOrderJSON(state) {
+    return {
+        "companyid": state.HomeData.companyid,
+        "customer": {
+            "addrid": state.UserData.addrid,
+            "fname": state.UserData.fname,
+            "lname": state.UserData.lname,
+            "phone": state.UserData.phone,
+            "email": state.UserData.email,
+            "address1": state.UserData.address1,
+            "address2": state.UserData.address2,
+            "pin": state.UserData.pin,
+            "city": state.UserData.city,
+            "dist": state.UserData.dist,
+            "state": state.UserData.state,
+            "country": state.UserData.country,
+            "type": state.UserData.type,
+            "spclrequest": state.CheckoutData.special_request,
+            "paymentmode": state.CheckoutData.payment_mode,
+            "deliveryslot": state.CheckoutData.checkoutDetails.delivery_slot
+        },
+        "order": {
+            "orderdate": state.CheckoutData.checkoutDetails.date,
+            "totalamt": state.CheckoutData.checkoutDetails.totalamt,
+            "totaltaxamt": state.CheckoutData.checkoutDetails.totaltaxamt,
+            "deliverychargeamt": state.CheckoutData.checkoutDetails.deliverychargeamt,
+            "grandtotalamt": state.CheckoutData.checkoutDetails.grandtotalamt,
+            "discount_code": state.CheckoutData.selected_voucher.code || '',
+            "discount_total": state.CheckoutData.checkoutDetails.discount_total || '',
+            "data": state.CheckoutData.checkoutDetails.item
+        }
+    }
+}
+//...................................................................
+
+/**
+ * Export Object (Action + Reducer)
+ */
+const CheckoutAction = {
+    reducer: reducer,
+    actions: {
+        checkOutOrder,
+        placeOrder,
+        setModal,
+        set_special_request,
+        setPromModal,
+        validateDiscount,
+        cleanDiscount
+    }
+}
+
+export default CheckoutAction
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
